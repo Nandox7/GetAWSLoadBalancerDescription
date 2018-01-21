@@ -22,7 +22,7 @@ public class DescribeAWSLoadBalancer {
 	/* Attempt 1. Outdated way to do it */ 
 		
 	BasicAWSCredentials credentials = 
-			new BasicAWSCredentials("AKIAIFV53QSN7UWLEYGA", "wLS6f7GE+PSYnNoik7CPtTRqwUr4uz8t/t1xhh68");
+			new BasicAWSCredentials("<accesskey>", "<secretaccesskey>");
 	
 	AmazonElasticLoadBalancingClient elb = 
 			(AmazonElasticLoadBalancingClient) new AmazonElasticLoadBalancingClient(credentials).withRegion(Regions.EU_WEST_1);
