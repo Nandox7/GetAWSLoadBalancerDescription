@@ -42,14 +42,13 @@ public class DescribeAWSLoadBalancer {
     System.out.println("ServiceName: " + elb.getServiceName());
     
     /* Attempt 2, the correct way to do it. Credentials are in .aws/credentials file */
-    
     AmazonElasticLoadBalancingClientBuilder builder = AmazonElasticLoadBalancingClientBuilder.standard();
     AmazonElasticLoadBalancingClient aelb = (AmazonElasticLoadBalancingClient) AmazonElasticLoadBalancingClientBuilder.standard().
     		withRegion(Regions.EU_WEST_1).build();
     
     DescribeLoadBalancersResult result = aelb.describeLoadBalancers();
-    System.out.println("Attempt 2");
-
+  
+	System.out.println("Attempt 2");
   	DescribeLoadBalancersResult describeLoadBalancers2 = aelb.describeLoadBalancers();
   	List<LoadBalancerDescription> loadBalancerDescriptions2 = describeLoadBalancers2.getLoadBalancerDescriptions();
   	for (LoadBalancerDescription description : loadBalancerDescriptions2) {
